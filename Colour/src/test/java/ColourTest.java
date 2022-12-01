@@ -40,6 +40,8 @@ class ColourTest {
         assertThrows(IllegalArgumentException.class ,testConstructor2 ) ;
         Executable testConstructor3 = () -> new Colour("0000000000000000000000000");
         assertThrows(IllegalArgumentException.class ,testConstructor3 ) ;
+        Executable testConstructor4 = () -> new Colour("123456781234567812345678");
+        assertThrows(IllegalArgumentException.class ,testConstructor4 ) ;
         Executable testSetter1 = () -> colour1.setRed(5);
         assertThrows(IllegalArgumentException.class, testSetter1);
         Executable testSetter2 = () -> colour1.setBlue(5);
