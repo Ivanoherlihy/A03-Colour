@@ -1,4 +1,4 @@
-
+import static java.lang.Math.pow;
 
 public class Colour {
 
@@ -17,12 +17,38 @@ public class Colour {
             this.green = green;
         }
     }
+
+    public Colour(String colours) {
+
+        String red = colours.substring(16, 24);
+        String green = colours.substring(8, 16);
+        String blue = colours.substring(0, 8);
+        this.red = convertByte(red);
+        this.green = convertByte(green);
+        this.blue = convertByte(blue);
+
+    }
+
+    private float convertByte(String Byte) {
+        float out = 0;
+        if (Byte.equals("11111111"))
+            out = 1f;
+        else {
+            for (int i = 0; i < 8; i++) {
+                out += (1f / (pow(2, i + 1))) * (Integer.valueOf(Byte.substring(i, i + 1)));
+
+            }
+        }
+        return out;
+    }
+
+
     public float getRed() {
         return red;
     }
 
     public void setRed(float red) {
-        if (red>1 || red<0)
+        if (red > 1 || red < 0)
             throw new IllegalArgumentException();
         else
             this.red = red;
@@ -33,7 +59,7 @@ public class Colour {
     }
 
     public void setBlue(float blue) {
-        if (blue>1 || blue<0)
+        if (blue > 1 || blue < 0)
             throw new IllegalArgumentException();
         else
             this.blue = red;
@@ -44,7 +70,7 @@ public class Colour {
     }
 
     public void setGreen(float green) {
-        if (green>1 || green<0)
+        if (green > 1 || green < 0)
             throw new IllegalArgumentException();
         else
             this.green = green;
