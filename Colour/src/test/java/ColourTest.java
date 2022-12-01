@@ -34,14 +34,19 @@ class ColourTest {
 
     @Test
     public void illegalArgumentTest(){
-        Executable testConstructor = () -> new Colour(5F,.1F,.1F);
-        assertThrows(IllegalArgumentException.class ,testConstructor ) ;
+        Executable testConstructor1 = () -> new Colour(5F,.1F,.1F);
+        assertThrows(IllegalArgumentException.class ,testConstructor1 ) ;
+        Executable testConstructor2 = () -> new Colour("");
+        assertThrows(IllegalArgumentException.class ,testConstructor2 ) ;
+        Executable testConstructor3 = () -> new Colour("0000000000000000000000000");
+        assertThrows(IllegalArgumentException.class ,testConstructor3 ) ;
         Executable testSetter1 = () -> colour1.setRed(5);
         assertThrows(IllegalArgumentException.class, testSetter1);
         Executable testSetter2 = () -> colour1.setBlue(5);
         assertThrows(IllegalArgumentException.class, testSetter2);
         Executable testSetter3 = () -> colour1.setGreen(5);
         assertThrows(IllegalArgumentException.class, testSetter3);
+
 
     }
 
