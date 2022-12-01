@@ -36,7 +36,7 @@ public class Colour {
             out = 1f;
         else {
             for (int i = 0; i < 8; i++) {
-                out += (1f / (pow(2, i + 1))) * (Integer.valueOf(Byte.substring(i, i + 1)));
+                out += (1f / (pow(2, i + 1))) * Integer.parseInt(Byte.substring(i, i + 1));
 
             }
         }
