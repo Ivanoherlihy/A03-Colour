@@ -19,7 +19,8 @@ public class Colour {
     }
 
     public Colour(String colours) {
-
+        if (colours.length()!=24)
+            throw new IllegalArgumentException();
         String red = colours.substring(16, 24);
         String green = colours.substring(8, 16);
         String blue = colours.substring(0, 8);
