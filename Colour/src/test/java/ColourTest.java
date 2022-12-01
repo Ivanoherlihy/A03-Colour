@@ -13,7 +13,7 @@ class ColourTest {
     @BeforeEach
     public void setup(){
          colour1 = new Colour(.1f,.2f,.4f);
-         colour2 = new Colour(.2f,.3f,.1f);
+         colour2 = new Colour(.1f,.2f,.4f);
     }
     @Test
     public void floatConstructor (){
@@ -51,5 +51,8 @@ class ColourTest {
 
 
     }
-
+    @Test
+    public void equalTest(){
+        assertEquals(colour1,colour2);
+    }
 }
