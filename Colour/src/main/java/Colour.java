@@ -87,10 +87,9 @@ public class Colour {
     }
     @Override
     public boolean equals(Object o){
+
         Colour colour = (Colour) o;
-        if (this.red == colour.getRed() && this.green == colour.getGreen() && this.blue == colour.getBlue())
-            return true;
-        else return false;
+        return this.red == colour.getRed() && this.green == colour.getGreen() && this.blue == colour.getBlue();
 
     }
 }
