@@ -23,6 +23,14 @@ class ColourTest {
         assertEquals(.4f,colour1.getGreen());
 
     }
+    @Test
+    public  void binaryConstuctor(){
+        Colour colour = new Colour("111111110000000010000000") ;
+        assertEquals(1, colour.getBlue());
+        assertEquals(0,colour.getGreen());
+        assertEquals(.5f,colour.getRed());
+
+    }
 
     @Test
     public void illegalArgumentTest(){
@@ -36,5 +44,5 @@ class ColourTest {
         assertThrows(IllegalArgumentException.class, testSetter3);
 
     }
-#
+
 }
