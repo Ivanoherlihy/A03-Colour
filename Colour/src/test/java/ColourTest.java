@@ -16,13 +16,14 @@ class ColourTest {
          colour2 = new Colour(.2f,.3f,.1f);
     }
     @Test
-    public void constucture(){
+    public void floatConstructor (){
 
         assertEquals(.1f,colour1.getRed());
         assertEquals(.2f,colour1.getBlue());
         assertEquals(.4f,colour1.getGreen());
 
     }
+
     @Test
     public void illegalArgumentTest(){
         Executable testConstructor = () -> new Colour(5F,.1F,.1F);
@@ -35,7 +36,5 @@ class ColourTest {
         assertThrows(IllegalArgumentException.class, testSetter3);
 
     }
-    public void setterTest(){
-
-    }
+#
 }
