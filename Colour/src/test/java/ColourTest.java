@@ -17,10 +17,10 @@ class ColourTest {
     }
     @Test
     public void constucture(){
-        Colour colour = new Colour(.1f,.2f,.4f);
-        assertEquals(.1f,colour.getRed());
-        assertEquals(.2f,colour.getBlue());
-        assertEquals(.4f,colour.getGreen());
+
+        assertEquals(.1f,colour1.getRed());
+        assertEquals(.2f,colour1.getBlue());
+        assertEquals(.4f,colour1.getGreen());
 
     }
     @Test
