@@ -87,7 +87,8 @@ public class Colour {
     }
     @Override
     public boolean equals(Object o){
-
+        if (o.getClass() != Colour.class)
+            throw new IllegalArgumentException();
         Colour colour = (Colour) o;
         return this.red == colour.getRed() && this.green == colour.getGreen() && this.blue == colour.getBlue();
 
