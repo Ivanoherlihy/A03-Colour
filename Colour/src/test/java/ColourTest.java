@@ -48,6 +48,8 @@ class ColourTest {
         assertThrows(IllegalArgumentException.class, testSetter2);
         Executable testSetter3 = () -> colour1.setGreen(5);
         assertThrows(IllegalArgumentException.class, testSetter3);
+        Executable equalsThowsTest = () -> colour1.equals("");
+        assertThrows(IllegalArgumentException.class,equalsThowsTest );
 
 
     }
